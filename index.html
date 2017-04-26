@@ -297,6 +297,7 @@ a {
                       
                       var icon = icons[locations[i][9]]
                       if (icon == null) {
+                          scaledSize: new google.maps.Size(50, 50)
                           icon = icons["default"].icon;
                       } else {
                           icon = icon.icon;
