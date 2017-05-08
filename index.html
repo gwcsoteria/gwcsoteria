@@ -192,9 +192,9 @@ a {
     <!-- Make sure all your bars are the first things in your <body> -->
 
         <header class="bar bar-nav">
-         <h1 class="title">Google Maps: San Francisco
-              <img onclick="location.href = 'Legend.html';" width="40px" height="40px" src="1491471453_sign-info.png">
-             </h1>
+         <h3 class="title">Google Maps: San Francisco
+              <img onclick="location.href = 'Legend.html';" width="30px" height="30px" src="1491471453_sign-info.png">
+             </h3>
         </header>
 
 <div >
@@ -302,6 +302,14 @@ a {
                           icon = icon.icon;
                       }
                       
+                    // added to resize icons to be smaller
+                     icon = {
+                        url: icon, // url
+                        scaledSize: new google.maps.Size(25, 25), // scaled size
+                        origin: new google.maps.Point(0,0), // origin
+                        anchor: new google.maps.Point(0, 0) // anchor
+                    };
+                    
                     marker = new google.maps.Marker({
                       position: new google.maps.LatLng(locations[i][18], locations[i][17]),
                       map: map,
